@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.page_title"></title>
+  <meta name="description" content="" data-i18n="meta.meta_description">
+  <link rel="canonical" href="https://flirtcam-ai.com/nl/">
+  <link rel="alternate" hreflang="nl" href="https://flirtcam-ai.com/nl/">
+  <link rel="alternate" hreflang="fr" href="https://flirtcam-ai.com/fr/">
+  <link rel="alternate" hreflang="es" href="https://flirtcam-ai.com/es/">
+  <link rel="alternate" hreflang="de" href="https://flirtcam-ai.com/de/">
+  <link rel="alternate" hreflang="it" href="https://flirtcam-ai.com/it/">
+  <link rel="alternate" hreflang="pt" href="https://flirtcam-ai.com/pt/">
+  <link rel="alternate" hreflang="nl" href="https://flirtcam-ai.com/nl/">
+  <link rel="alternate" hreflang="pl" href="https://flirtcam-ai.com/pl/">
+  <link rel="alternate" hreflang="sv" href="https://flirtcam-ai.com/sv/">
+  <link rel="alternate" hreflang="ro" href="https://flirtcam-ai.com/ro/">
+  <link rel="alternate" hreflang="hr" href="https://flirtcam-ai.com/hr/">
+  <link rel="alternate" hreflang="x-default" href="https://flirtcam-ai.com/nl/">
+  <meta property="og:title" content="" data-i18n="meta.og_title">
+  <meta property="og:description" content="" data-i18n="meta.og_description">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flirtcam-ai.com/nl/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="" data-i18n="meta.twitter_title">
+  <meta name="twitter:description" content="" data-i18n="meta.twitter_description">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <script src="../js/i18n.js" defer></script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#050505;color:#e8e8e8;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block;border-radius:.5rem}
+    .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+    .btn-primary{background:linear-gradient(135deg,#ff1a1a,#b30000);color:#fff;padding:.75rem 1.5rem;border-radius:9999px;font-weight:600;display:inline-block;transition:opacity .2s}
+    .btn-primary:hover{opacity:.9}
+    .btn-secondary{background:rgba(255,255,255,.08);color:#fff;padding:.75rem 1.5rem;border-radius:9999px;font-weight:600;display:inline-block;border:1px solid rgba(255,255,255,.12);transition:background .2s}
+    .btn-secondary:hover{background:rgba(255,255,255,.15)}
+
+    /* 01 Age Banner */
+    .age-banner{background:#1a0505;color:#ff9999;text-align:center;padding:.5rem;font-size:.8rem;font-weight:600;border-bottom:1px solid rgba(255,26,26,.2)}
+
+    /* 02 Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(5,5,5,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+    .logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#ff1a1a,#b30000);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    nav{display:flex;gap:2rem}
+    nav a{color:#a1a1aa;font-size:.9rem;transition:color .2s}
+    nav a:hover{color:#fff}
+
+    /* 03 Hero */
+    .hero{text-align:center;padding:5rem 0 3rem}
+    .hero h1{font-size:3rem;font-weight:800;line-height:1.1;margin-bottom:1rem;background:linear-gradient(135deg,#fff 30%,#ff1a1a 70%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .hero .subtitle{font-size:1.25rem;color:#a1a1aa;max-width:600px;margin:0 auto 2rem}
+    .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+    /* 04 Social Proof */
+    .social-proof{background:rgba(255,26,26,.05);border-top:1px solid rgba(255,26,26,.1);border-bottom:1px solid rgba(255,26,26,.1);padding:1.5rem 0}
+    .stats{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;text-align:center}
+    .stat-number{font-size:1.75rem;font-weight:800;color:#ff1a1a}
+    .stat-label{font-size:.85rem;color:#a1a1aa}
+
+    /* 05 Features */
+    .features{padding:4rem 0}
+    .section-title{text-align:center;font-size:2rem;font-weight:700;margin-bottom:.5rem}
+    .section-subtitle{text-align:center;color:#a1a1aa;margin-bottom:3rem}
+    .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+    .feature-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:1rem;padding:2rem;transition:transform .2s,border-color .2s}
+    .feature-card:hover{transform:translateY(-4px);border-color:rgba(255,26,26,.3)}
+    .feature-icon{font-size:2rem;margin-bottom:1rem}
+    .feature-card h3{font-size:1.25rem;font-weight:600;margin-bottom:.5rem}
+    .feature-card p{color:#a1a1aa;font-size:.95rem}
+
+    /* 06 How It Works */
+    .how-it-works{padding:4rem 0;background:rgba(255,26,26,.03)}
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;margin-top:2rem}
+    .step{text-align:center}
+    .step-number{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#ff1a1a,#b30000);display:flex;align-items:center;justify-content:center;font-weight:700;margin:0 auto 1rem}
+    .step h3{font-size:1.1rem;font-weight:600;margin-bottom:.5rem}
+    .step p{color:#a1a1aa;font-size:.9rem}
+
+    /* 07 Models */
+    .models{padding:4rem 0}
+    .models-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    @media(max-width:767px){.models-grid{grid-template-columns:1fr}}
+    .model-card{position:relative;border-radius:.75rem;overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:transform .2s}
+    .model-card:hover{transform:scale(1.02);border-color:rgba(255,26,26,.3)}
+    .model-card img{width:100%;aspect-ratio:3/4;object-fit:cover}
+    .model-info{padding:1rem}
+    .model-info h4{font-weight:600;margin-bottom:.25rem}
+    .model-info p{font-size:.85rem;color:#a1a1aa}
+    .model-tag{display:inline-block;background:rgba(255,26,26,.15);color:#ff1a1a;padding:.15rem .5rem;border-radius:9999px;font-size:.75rem;margin-top:.5rem}
+    .model-live-btn{display:block;width:100%;margin-top:.75rem;padding:.5rem 0;text-align:center;background:linear-gradient(135deg,#ff1a1a,#b30000);color:#fff;border-radius:9999px;font-size:.85rem;font-weight:600;transition:opacity .2s}
+    .model-live-btn:hover{opacity:.9}
+
+    /* 08 Builder */
+    .builder-section{padding:4rem 0;background:rgba(255,26,26,.03)}
+    .builder-content{max-width:800px;margin:0 auto;text-align:center}
+    .builder-text{color:#a1a1aa;font-size:1.05rem;line-height:1.8;margin-bottom:2rem}
+    .builder-text p{margin-bottom:1.25rem}
+    .builder-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin:2rem 0}
+    .builder-step{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:1rem;padding:1.5rem;text-align:center}
+    .builder-step-icon{font-size:2rem;margin-bottom:.75rem}
+    .builder-step h4{font-size:1rem;font-weight:600;margin-bottom:.5rem}
+    .builder-step p{color:#a1a1aa;font-size:.9rem}
+
+    /* 09 Testimonials */
+    .testimonials{padding:4rem 0;background:rgba(255,26,26,.03)}
+    .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+    .testimonial-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:1rem;padding:1.5rem}
+    .testimonial-card .stars{color:#ff1a1a;margin-bottom:.5rem}
+    .testimonial-card p{color:#d4d4d8;margin-bottom:1rem;font-style:italic}
+    .testimonial-author{font-weight:600;font-size:.9rem}
+    .testimonial-role{font-size:.8rem;color:#a1a1aa}
+
+    /* 09 Pricing */
+    .pricing{padding:4rem 0}
+    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:900px;margin:0 auto}
+    .plan{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:1rem;padding:2rem;text-align:center;position:relative}
+    .plan.popular{border-color:rgba(255,26,26,.4);background:rgba(255,26,26,.05)}
+    .popular-badge{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#ff1a1a,#b30000);color:#fff;padding:.25rem 1rem;border-radius:9999px;font-size:.75rem;font-weight:600}
+    .plan-name{font-size:1.25rem;font-weight:700;margin-bottom:.5rem}
+    .plan-price{font-size:2.5rem;font-weight:800;margin-bottom:.5rem}
+    .plan-price span{font-size:1rem;color:#a1a1aa;font-weight:400}
+    .plan-features{list-style:none;margin:1.5rem 0}
+    .plan-features li{padding:.4rem 0;color:#a1a1aa;font-size:.9rem}
+    .plan-features li::before{content:"✓";color:#ff1a1a;margin-right:.5rem}
+
+    /* 10 FAQ */
+    .faq{padding:4rem 0;background:rgba(255,26,26,.03)}
+    .faq details{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:.75rem;margin-bottom:1rem;padding:1rem 1.25rem;cursor:pointer}
+    .faq summary{font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+    .faq summary::after{content:"+";color:#ff1a1a;font-size:1.25rem}
+    .faq details[open] summary::after{content:"−"}
+    .faq details p{color:#a1a1aa;margin-top:.75rem;font-size:.95rem}
+
+    /* 11 CTA */
+    .cta-section{text-align:center;padding:5rem 0;background:linear-gradient(135deg,rgba(255,26,26,.1),rgba(179,0,0,.05))}
+    .cta-section h2{font-size:2rem;font-weight:700;margin-bottom:1rem}
+    .cta-section p{color:#a1a1aa;margin-bottom:2rem}
+
+    /* 12 Footer */
+    footer{padding:3rem 0 2rem;border-top:1px solid rgba(255,255,255,.06)}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-bottom:2rem}
+    .footer-col h4{font-size:1rem;font-weight:600;margin-bottom:1rem}
+    .footer-col a{display:block;color:#a1a1aa;font-size:.9rem;padding:.25rem 0;transition:color .2s}
+    .footer-col a:hover{color:#fff}
+    .footer-bottom{text-align:center;padding-top:2rem;border-top:1px solid rgba(255,255,255,.06)}
+    .footer-bottom .age-warning{color:#ff1a1a;font-weight:600;margin-bottom:.5rem}
+    .affiliate-disclosure{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:.5rem;padding:1rem;margin-bottom:1.5rem;font-size:.85rem;color:#a1a1aa}
+    .affiliate-disclosure a{color:#ff1a1a;text-decoration:underline}
+
+    @media(max-width:768px){
+      .hero h1{font-size:2rem}
+      nav{display:none}
+      .stats{gap:1.5rem}
+      .feature-grid,.testimonial-grid{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 01 Age Banner -->
+  <div class="age-banner" data-i18n="age_banner.text"></div>
+
+  <!-- 02 Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo" data-i18n="header.logo_text"></a>
+      <nav>
+        <a href="#features" data-i18n="header.nav_features"></a>
+        <a href="#models" data-i18n="header.nav_models"></a>
+        <a href="#pricing" data-i18n="header.nav_pricing"></a>
+        <a href="#faq" data-i18n="header.nav_faq"></a>
+      </nav>
+      <a href="/go/flirtcam" rel="nofollow" class="btn-primary" data-i18n="header.cta"></a>
+    </div>
+  </header>
+
+  <!-- 03 Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 data-i18n="hero.title"></h1>
+      <p class="subtitle" data-i18n="hero.subtitle"></p>
+      <div class="hero-buttons">
+        <a href="/go/flirtcam" rel="nofollow" class="btn-primary" data-i18n="hero.cta_primary"></a>
+        <a href="#features" class="btn-secondary" data-i18n="hero.cta_secondary"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Social Proof -->
+  <section class="social-proof">
+    <div class="container">
+      <div class="stats">
+        <div><div class="stat-number" data-i18n="social.stat_1_number"></div><div class="stat-label" data-i18n="social.stat_1_label"></div></div>
+        <div><div class="stat-number" data-i18n="social.stat_2_number"></div><div class="stat-label" data-i18n="social.stat_2_label"></div></div>
+        <div><div class="stat-number" data-i18n="social.stat_3_number"></div><div class="stat-label" data-i18n="social.stat_3_label"></div></div>
+        <div><div class="stat-number" data-i18n="social.stat_4_number"></div><div class="stat-label" data-i18n="social.stat_4_label"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Models -->
+  <section class="models" id="models">
+    <div class="container">
+      <h2 class="section-title" data-i18n="models.title"></h2>
+      <p class="section-subtitle" data-i18n="models.subtitle"></p>
+      <div class="models-grid">
+        <div class="model-card">
+          <img loading="lazy" src="../images/model-1.webp" alt="" data-i18n="models.model_1_alt">
+          <div class="model-info">
+            <h4 data-i18n="models.model_1_name"></h4>
+            <p data-i18n="models.model_1_desc"></p>
+            <span class="model-tag" data-i18n="models.model_1_tag"></span>
+            <a href="/go/flirtcam" rel="nofollow" class="model-live-btn" data-i18n="models.live_btn"></a>
+          </div>
+        </div>
+        <div class="model-card">
+          <img loading="lazy" src="../images/model-2.webp" alt="" data-i18n="models.model_2_alt">
+          <div class="model-info">
+            <h4 data-i18n="models.model_2_name"></h4>
+            <p data-i18n="models.model_2_desc"></p>
+            <span class="model-tag" data-i18n="models.model_2_tag"></span>
+            <a href="/go/flirtcam" rel="nofollow" class="model-live-btn" data-i18n="models.live_btn"></a>
+          </div>
+        </div>
+        <div class="model-card">
+          <img loading="lazy" src="../images/model-3.webp" alt="" data-i18n="models.model_3_alt">
+          <div class="model-info">
+            <h4 data-i18n="models.model_3_name"></h4>
+            <p data-i18n="models.model_3_desc"></p>
+            <span class="model-tag" data-i18n="models.model_3_tag"></span>
+            <a href="/go/flirtcam" rel="nofollow" class="model-live-btn" data-i18n="models.live_btn"></a>
+          </div>
+        </div>
+        <div class="model-card">
+          <img loading="lazy" src="../images/model-4.webp" alt="" data-i18n="models.model_4_alt">
+          <div class="model-info">
+            <h4 data-i18n="models.model_4_name"></h4>
+            <p data-i18n="models.model_4_desc"></p>
+            <span class="model-tag" data-i18n="models.model_4_tag"></span>
+            <a href="/go/flirtcam" rel="nofollow" class="model-live-btn" data-i18n="models.live_btn"></a>
+          </div>
+        </div>
+        <div class="model-card">
+          <img loading="lazy" src="../images/model-5.webp" alt="" data-i18n="models.model_5_alt">
+          <div class="model-info">
+            <h4 data-i18n="models.model_5_name"></h4>
+            <p data-i18n="models.model_5_desc"></p>
+            <span class="model-tag" data-i18n="models.model_5_tag"></span>
+            <a href="/go/flirtcam" rel="nofollow" class="model-live-btn" data-i18n="models.live_btn"></a>
+          </div>
+        </div>
+        <div class="model-card">
+          <img loading="lazy" src="../images/model-6.webp" alt="" data-i18n="models.model_6_alt">
+          <div class="model-info">
+            <h4 data-i18n="models.model_6_name"></h4>
+            <p data-i18n="models.model_6_desc"></p>
+            <span class="model-tag" data-i18n="models.model_6_tag"></span>
+            <a href="/go/flirtcam" rel="nofollow" class="model-live-btn" data-i18n="models.live_btn"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title" data-i18n="features.title"></h2>
+      <p class="section-subtitle" data-i18n="features.subtitle"></p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📹</div>
+          <h3 data-i18n="features.f1_title"></h3>
+          <p data-i18n="features.f1_desc"></p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3 data-i18n="features.f2_title"></h3>
+          <p data-i18n="features.f2_desc"></p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3 data-i18n="features.f3_title"></h3>
+          <p data-i18n="features.f3_desc"></p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎭</div>
+          <h3 data-i18n="features.f4_title"></h3>
+          <p data-i18n="features.f4_desc"></p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎙️</div>
+          <h3 data-i18n="features.f5_title"></h3>
+          <p data-i18n="features.f5_desc"></p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3 data-i18n="features.f6_title"></h3>
+          <p data-i18n="features.f6_desc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 How It Works -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2 class="section-title" data-i18n="how.title"></h2>
+      <p class="section-subtitle" data-i18n="how.subtitle"></p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3 data-i18n="how.step_1_title"></h3>
+          <p data-i18n="how.step_1_desc"></p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3 data-i18n="how.step_2_title"></h3>
+          <p data-i18n="how.step_2_desc"></p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3 data-i18n="how.step_3_title"></h3>
+          <p data-i18n="how.step_3_desc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 Builder / Create Your Match -->
+  <section class="builder-section" id="builder">
+    <div class="container">
+      <div class="builder-content">
+        <h2 class="section-title" data-i18n="builder.title"></h2>
+        <p class="section-subtitle" data-i18n="builder.subtitle"></p>
+        <div class="builder-text">
+          <p data-i18n="builder.p1"></p>
+          <p data-i18n="builder.p2"></p>
+          <p data-i18n="builder.p3"></p>
+        </div>
+        <div class="builder-steps">
+          <div class="builder-step">
+            <div class="builder-step-icon">🎭</div>
+            <h4 data-i18n="builder.s1_title"></h4>
+            <p data-i18n="builder.s1_desc"></p>
+          </div>
+          <div class="builder-step">
+            <div class="builder-step-icon">👤</div>
+            <h4 data-i18n="builder.s2_title"></h4>
+            <p data-i18n="builder.s2_desc"></p>
+          </div>
+          <div class="builder-step">
+            <div class="builder-step-icon">👗</div>
+            <h4 data-i18n="builder.s3_title"></h4>
+            <p data-i18n="builder.s3_desc"></p>
+          </div>
+          <div class="builder-step">
+            <div class="builder-step-icon">🎬</div>
+            <h4 data-i18n="builder.s4_title"></h4>
+            <p data-i18n="builder.s4_desc"></p>
+          </div>
+        </div>
+        <a href="/go/flirtcam" rel="nofollow" class="btn-primary" data-i18n="builder.cta"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title" data-i18n="testimonials.title"></h2>
+      <p class="section-subtitle" data-i18n="testimonials.subtitle"></p>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p data-i18n="testimonials.t1_text"></p>
+          <div class="testimonial-author" data-i18n="testimonials.t1_author"></div>
+          <div class="testimonial-role" data-i18n="testimonials.t1_role"></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p data-i18n="testimonials.t2_text"></p>
+          <div class="testimonial-author" data-i18n="testimonials.t2_author"></div>
+          <div class="testimonial-role" data-i18n="testimonials.t2_role"></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p data-i18n="testimonials.t3_text"></p>
+          <div class="testimonial-author" data-i18n="testimonials.t3_author"></div>
+          <div class="testimonial-role" data-i18n="testimonials.t3_role"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 Pricing -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2 class="section-title" data-i18n="pricing.title"></h2>
+      <p class="section-subtitle" data-i18n="pricing.subtitle"></p>
+      <div class="pricing-grid">
+        <div class="plan">
+          <div class="plan-name" data-i18n="pricing.free_name"></div>
+          <div class="plan-price" data-i18n="pricing.free_price"></div>
+          <ul class="plan-features">
+            <li data-i18n="pricing.free_f1"></li>
+            <li data-i18n="pricing.free_f2"></li>
+            <li data-i18n="pricing.free_f3"></li>
+            <li data-i18n="pricing.free_f4"></li>
+          </ul>
+          <a href="/go/flirtcam" rel="nofollow" class="btn-secondary" data-i18n="pricing.free_cta"></a>
+        </div>
+        <div class="plan popular">
+          <div class="popular-badge" data-i18n="pricing.popular_badge"></div>
+          <div class="plan-name" data-i18n="pricing.pro_name"></div>
+          <div class="plan-price" data-i18n="pricing.pro_price"></div>
+          <ul class="plan-features">
+            <li data-i18n="pricing.pro_f1"></li>
+            <li data-i18n="pricing.pro_f2"></li>
+            <li data-i18n="pricing.pro_f3"></li>
+            <li data-i18n="pricing.pro_f4"></li>
+            <li data-i18n="pricing.pro_f5"></li>
+          </ul>
+          <a href="/go/flirtcam" rel="nofollow" class="btn-primary" data-i18n="pricing.pro_cta"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 class="section-title" data-i18n="faq.title"></h2>
+      <p class="section-subtitle" data-i18n="faq.subtitle"></p>
+      <details>
+        <summary data-i18n="faq.q1"></summary>
+        <p data-i18n="faq.a1"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q2"></summary>
+        <p data-i18n="faq.a2"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q3"></summary>
+        <p data-i18n="faq.a3"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q4"></summary>
+        <p data-i18n="faq.a4"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q5"></summary>
+        <p data-i18n="faq.a5"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q6"></summary>
+        <p data-i18n="faq.a6"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q7"></summary>
+        <p data-i18n="faq.a7"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq.q8"></summary>
+        <p data-i18n="faq.a8"></p>
+      </details>
+    </section>
+
+  <!-- 11 CTA Final -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-i18n="cta.title"></h2>
+      <p data-i18n="cta.subtitle"></p>
+      <a href="/go/flirtcam" rel="nofollow" class="btn-primary" data-i18n="cta.button"></a>
+    </div>
+  </section>
+
+  <!-- 12 Footer -->
+  <footer>
+    <div class="container">
+      <div class="affiliate-disclosure" data-i18n="footer.disclosure"></div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="footer.col2_title"></h4>
+          <a href="../privacy.html" rel="nofollow" data-i18n="footer.col2_link1"></a>
+          <a href="../terms.html" rel="nofollow" data-i18n="footer.col2_link2"></a>
+          <a href="../cookies.html" rel="nofollow" data-i18n="footer.col2_link3"></a>
+          <a href="../dmca.html" rel="nofollow" data-i18n="footer.col2_link4"></a>
+          <a href="../affiliate-disclosure.html" rel="nofollow" data-i18n="footer.col2_link5"></a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.col3_title"></h4>
+          <a href="#features" data-i18n="footer.col3_link1"></a>
+          <a href="#models" data-i18n="footer.col3_link2"></a>
+          <a href="#pricing" data-i18n="footer.col3_link3"></a>
+          <a href="#faq" data-i18n="footer.col3_link4"></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="age-warning" data-i18n="footer.age_warning"></div>
+        <p data-i18n="footer.copyright"></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
