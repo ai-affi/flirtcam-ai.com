@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+Disallow: /terms.html
+Disallow: /cookies.html
+Disallow: /dmca.html
+Disallow: /affiliate-disclosure.html
+
+Sitemap: https://flirtcam-ai.com/sitemap.xml
