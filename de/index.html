@@ -546,8 +546,8 @@
   </footer>
 
 <script>
-    function toggleLang(){var m=document.getElementById('langMenu');m.classList.toggle('open');var b=document.getElementById('langBtn');b.innerHTML=m.classList.contains('open')?b.innerHTML.replace('▲','▼'):b.innerHTML.replace('▼','▲')}
-    document.addEventListener('click',function(e){if(!e.target.closest('.lang-dropdown')){var m=document.getElementById('langMenu');if(m.classList.contains('open')){m.classList.remove('open');var b=document.getElementById('langBtn');b.innerHTML=b.innerHTML.replace('▼','▲')}}}
+    function toggleLang(){var m=document.getElementById('langMenu');m.classList.toggle('open');}
+    document.addEventListener('click',function(e){if(!e.target.closest('.lang-dropdown')){var m=document.getElementById('langMenu');if(m.classList.contains('open')){m.classList.remove('open');}}})
   </script>
 </body>
 </html>
