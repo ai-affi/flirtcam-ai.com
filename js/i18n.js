@@ -25,7 +25,7 @@
 
   var pathParts = window.location.pathname.split('/').filter(function(p){return p.length > 0;});
   var isSubfolder = pathParts.length >= 1 && /^[a-z]{2}$/.test(pathParts[0]);
-  var jsonPath = isSubfolder ? '../content.json' : 'content.json';
+  var jsonPath = 'content.json';
 
   fetch(jsonPath)
     .then(function(r) { return r.json(); })
