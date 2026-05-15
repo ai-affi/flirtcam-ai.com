@@ -159,6 +159,17 @@
       .feature-grid,.testimonial-grid{grid-template-columns:1fr}
       .steps{grid-template-columns:1fr}
     }
+  .lang-dropdown{position:relative;display:inline-block}
+    .lang-btn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;padding:.5rem 1rem;border-radius:8px;cursor:pointer;font-size:.9rem;display:flex;align-items:center;gap:.5rem;transition:all .2s;width:100%}
+    .lang-btn:hover{background:rgba(255,255,255,.15)}
+    .lang-menu{position:absolute;bottom:calc(100% + .5rem);left:0;background:#1a1a1a;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:.5rem;min-width:200px;box-shadow:0 -10px 40px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(10px);transition:all .2s;z-index:1000;max-height:320px;overflow-y:auto}
+    .lang-menu.open{opacity:1;visibility:visible;transform:translateY(0)}
+    .lang-item{display:block;padding:.5rem .75rem;border-radius:6px;color:#a1a1aa;font-size:.9rem;transition:all .15s;text-decoration:none}
+    .lang-item:hover{background:rgba(255,26,26,.15);color:#fff}
+    .lang-item.active{background:rgba(255,26,26,.25);color:#ff1a1a;font-weight:600}
+    .lang-menu::-webkit-scrollbar{width:6px}
+    .lang-menu::-webkit-scrollbar-track{background:transparent}
+    .lang-menu::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:3px}
   </style>
 </head>
 <body>
@@ -501,6 +512,31 @@
           <a href="#pricing" data-i18n="footer.col3_link3"></a>
           <a href="#faq" data-i18n="footer.col3_link4"></a>
         </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.col4_title">🌐 Language</h4>
+          <div class="lang-dropdown">
+            <button class="lang-btn" id="langBtn" onclick="toggleLang()">🇮🇩 Indonesia ▲</button>
+            <div class="lang-menu" id="langMenu">
+              <a href="../" class="lang-item">🇺🇸 English</a>
+              <a href="../fr/" class="lang-item">🇫🇷 Français</a>
+              <a href="../es/" class="lang-item">🇪🇸 Español</a>
+              <a href="../it/" class="lang-item">🇮🇹 Italiano</a>
+              <a href="../de/" class="lang-item">🇩🇪 Deutsch</a>
+              <a href="../nl/" class="lang-item">🇳🇱 Nederlands</a>
+              <a href="../pl/" class="lang-item">🇵🇱 Polski</a>
+              <a href="../sv/" class="lang-item">🇸🇪 Svenska</a>
+              <a href="../ro/" class="lang-item">🇷🇴 Română</a>
+              <a href="../hr/" class="lang-item">🇭🇷 Hrvatski</a>
+              <a href="../ru/" class="lang-item">🇷🇺 Русский</a>
+              <a href="../tr/" class="lang-item">🇹🇷 Türkçe</a>
+              <a href="../id/" class="lang-item active">🇮🇩 Indonesia</a>
+              <a href="../ja/" class="lang-item">🇯🇵 日本語</a>
+              <a href="../ko/" class="lang-item">🇰🇷 한국어</a>
+              <a href="../pt/" class="lang-item">🇵🇹 Português</a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="footer-bottom">
         <div class="age-warning" data-i18n="footer.age_warning"></div>
@@ -509,5 +545,9 @@
     </div>
   </footer>
 
+<script>
+    function toggleLang(){var m=document.getElementById('langMenu');m.classList.toggle('open');var b=document.getElementById('langBtn');b.innerHTML=m.classList.contains('open')?b.innerHTML.replace('▲','▼'):b.innerHTML.replace('▼','▲')}
+    document.addEventListener('click',function(e){if(!e.target.closest('.lang-dropdown')){var m=document.getElementById('langMenu');if(m.classList.contains('open')){m.classList.remove('open');var b=document.getElementById('langBtn');b.innerHTML=b.innerHTML.replace('▼','▲')}}}
+  </script>
 </body>
 </html>
