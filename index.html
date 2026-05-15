@@ -95,7 +95,18 @@
     .model-live-btn{display:block;width:100%;margin-top:.75rem;padding:.5rem 0;text-align:center;background:linear-gradient(135deg,#ff1a1a,#b30000);color:#fff;border-radius:9999px;font-size:.85rem;font-weight:600;transition:opacity .2s}
     .model-live-btn:hover{opacity:.9}
 
-    /* 08 Testimonials */
+    /* 08 Builder */
+    .builder-section{padding:4rem 0;background:rgba(255,26,26,.03)}
+    .builder-content{max-width:800px;margin:0 auto;text-align:center}
+    .builder-text{color:#a1a1aa;font-size:1.05rem;line-height:1.8;margin-bottom:2rem}
+    .builder-text p{margin-bottom:1.25rem}
+    .builder-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin:2rem 0}
+    .builder-step{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:1rem;padding:1.5rem;text-align:center}
+    .builder-step-icon{font-size:2rem;margin-bottom:.75rem}
+    .builder-step h4{font-size:1rem;font-weight:600;margin-bottom:.5rem}
+    .builder-step p{color:#a1a1aa;font-size:.9rem}
+
+    /* 09 Testimonials */
     .testimonials{padding:4rem 0;background:rgba(255,26,26,.03)}
     .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
     .testimonial-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:1rem;padding:1.5rem}
@@ -322,7 +333,45 @@
     </div>
   </section>
 
-  <!-- 08 Testimonials -->
+  <!-- 08 Builder / Create Your Match -->
+  <section class="builder-section" id="builder">
+    <div class="container">
+      <div class="builder-content">
+        <h2 class="section-title" data-i18n="builder.title"></h2>
+        <p class="section-subtitle" data-i18n="builder.subtitle"></p>
+        <div class="builder-text">
+          <p data-i18n="builder.p1"></p>
+          <p data-i18n="builder.p2"></p>
+          <p data-i18n="builder.p3"></p>
+        </div>
+        <div class="builder-steps">
+          <div class="builder-step">
+            <div class="builder-step-icon">🎭</div>
+            <h4 data-i18n="builder.s1_title"></h4>
+            <p data-i18n="builder.s1_desc"></p>
+          </div>
+          <div class="builder-step">
+            <div class="builder-step-icon">👤</div>
+            <h4 data-i18n="builder.s2_title"></h4>
+            <p data-i18n="builder.s2_desc"></p>
+          </div>
+          <div class="builder-step">
+            <div class="builder-step-icon">👗</div>
+            <h4 data-i18n="builder.s3_title"></h4>
+            <p data-i18n="builder.s3_desc"></p>
+          </div>
+          <div class="builder-step">
+            <div class="builder-step-icon">🎬</div>
+            <h4 data-i18n="builder.s4_title"></h4>
+            <p data-i18n="builder.s4_desc"></p>
+          </div>
+        </div>
+        <a href="/go/flirtcam" class="btn-primary" data-i18n="builder.cta"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 Testimonials -->
   <section class="testimonials">
     <div class="container">
       <h2 class="section-title" data-i18n="testimonials.title"></h2>
